@@ -12,7 +12,7 @@ interaction.
 ### Prerequisites
 - Python 3.8+
 - Docker (for Qdrant database)
-- Access to a ChatGPT API key (for the LLM model)
+- Access to a ChatGPT API key (for the LLM model), saved in the environment variable `OPENAI_API_KEY`
 
 
 ### Installation
