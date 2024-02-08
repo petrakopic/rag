@@ -64,11 +64,11 @@ def create_hyde(query: str):
         messages=[
             {
                 "role": "system",
-                "content": "write a passage to answer the question.",
+                "content": "write a short passage to answer the question."
             },
             {"role": "user", "content": f"Question {query}"},
         ],
-        max_tokens=350,
+        max_tokens=250,
     )
     return response.choices[0].message
 

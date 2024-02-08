@@ -9,7 +9,7 @@ class LocalQdrantClient:
     def __init__(
         self,
         collection_name: str,
-        vector_dim: str,
+        vector_dim: int,
         host: str = "localhost",
         port: int = 6333,
     ):
