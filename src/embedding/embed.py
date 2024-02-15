@@ -3,7 +3,7 @@ from functools import lru_cache
 from llama_index.embeddings import HuggingFaceEmbedding
 
 
-def embed(text: str)->list[float]:
+def embed(text: str) -> list[float]:
     model = initialize_embedding_model(config.EMBEDDING_MODEL)
     return model.get_text_embedding(text)
 

@@ -1,2 +1,8 @@
 EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
 OPENAI_MODEL = "gpt-3.5-turbo"
+TEXT_SUMMARIZATION_MODEL = "Falconsai/text_summarization"
+ENGLISH_SENTENCE_MODEL = "en_core_web_sm"
+NAMED_ENTITY_RECOGNITION_MODEL = "dslim/bert-base-NER"
+TABULAR_MODEL = "google/tapas-base-finetuned-wtq"
+ENTITY_RECOGNITION_MODEL = "dslim/bert-base-NER"
+QDRANT_COLLECTION="embedrai"

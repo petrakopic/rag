@@ -64,13 +64,32 @@ def create_hyde(query: str):
         messages=[
             {
                 "role": "system",
-                "content": "write a short passage to answer the question."
+                "content": "write a short passage to answer the question.",
             },
             {"role": "user", "content": f"Question {query}"},
         ],
         max_tokens=250,
     )
     return response.choices[0].message
+
+
+def router_query(question: str):
+    client = _initialize_openai_client()
+    response = client.chat.completions.create(
+        model=config.OPENAI_MODEL,
+        messages=[
+            {
+                "role": "system",
+                "content": "Assess the nature of each user question. Respond with 'general' for queries"
+                "seeking broad information or summaries. Use 'person' for inquiries that "
+                "necessitate identifying or mentioning individuals. "
+                "answer 'table' for questions that explicitly request information about table.",
+            },
+            {"role": "user", "content": f"Question: {question}"},
+        ],
+        max_tokens=350,
+    )
+    return response.choices[0].message.content
 
 
 @lru_cache(1)
