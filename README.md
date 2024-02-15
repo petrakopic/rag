@@ -1,5 +1,8 @@
 ## RAG 
 
+![Alt Text](streamlit.gif)
+
+
 This repository contains the implementation of a custom Retrieval-Augmented Generation (RAG) system designed for 
 efficient handling and querying of files. It allows users to upload PDF files and ask questions about their content 
 through an easy-to-use Streamlit application.
